@@ -1,0 +1,9 @@
+ALTER TABLE batch_spec_resolution_jobs DROP COLUMN IF EXISTS queued_at;
+ALTER TABLE batch_spec_workspace_execution_jobs DROP COLUMN IF EXISTS queued_at;
+ALTER TABLE changeset_jobs DROP COLUMN IF EXISTS queued_at;
+ALTER TABLE changesets DROP COLUMN IF EXISTS queued_at;
+ALTER TABLE cm_action_jobs DROP COLUMN IF EXISTS queued_at;
+ALTER TABLE cm_trigger_jobs DROP COLUMN IF EXISTS queued_at;
+ALTER TABLE external_service_sync_jobs DROP COLUMN IF EXISTS queued_at;
+ALTER TABLE insights_query_runner_jobs DROP COLUMN IF EXISTS queued_at;
+ALTER TABLE lsif_uploads DROP COLUMN IF EXISTS queued_at;

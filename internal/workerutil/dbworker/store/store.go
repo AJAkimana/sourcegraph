@@ -418,6 +418,7 @@ SELECT age FROM (
 	UNION
 	(SELECT EXTRACT(EPOCH FROM NOW() - {finished_at})::integer AS age FROM %s WHERE {state} = 'errored' AND {num_failures} < %s)
 ) s
+WHERE age IS NOT NULL
 ORDER BY age DESC
 LIMIT 1
 `

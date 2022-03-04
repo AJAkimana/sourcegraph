@@ -378,6 +378,7 @@ outer:
 	return strings.TrimSpace(filteredContent)
 }
 
+// TODO - should be tested
 var privilegedQueryPattern = lazyregexp.New(`(CREATE|COMMENT ON) EXTENSION .+;\n*`)
 
 // splitPrivilegedMigrations extracts the portion of the squashed migration file that must be run by
